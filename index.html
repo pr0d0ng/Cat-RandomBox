@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cat RandomBox : Welcome</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 150px;
+            padding-bottom: 400px;
+        }
+        #subtitle {
+            font-size: 100px;
+            text-align: center;
+            margin-left:150px;
+            margin-right:150px;
+            height:160px;
+        }
+        a{
+            text-decoration:none;
+            color:black;
+        }
+        h3{
+            font-size:25px;
+            text-align:center;
+            margin:0;
+        }
+        body{
+            background-image:url("images/cat in a box.png");
+            background-repeat:no-repeat;
+            background-position:center;
+            background-position-y:250px;
+        }
+        @media not all and (orientation: landscape) {
+            body {
+                background-position:center;
+                background-position-y: 25vh;
+            }
+            h1 {
+                padding-bottom:500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Cat RandomBox</h1>
+    <h2><div id="subtitle">야옹</div></h2>
+    <h3><a href="Cat RandomBox.html">입장하기</a></h3>
+    <script>
+                var names = ['야옹', 'Meow', 'ニャー', '喵', 'Мяу', 'Miau'];
+
+                setInterval(function () {
+                    var rand = Math.floor(Math.random() * names.length);
+                    document.getElementById("subtitle").innerText = names[rand];
+                }, 1500);
+    </script>
+</body>
+</html>
